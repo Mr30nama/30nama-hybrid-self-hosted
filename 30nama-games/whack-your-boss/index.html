@@ -31,17 +31,19 @@
     </style>
     <script>
       window.RufflePlayer = window.RufflePlayer || {}
-      window.addEventListener('load', (event) => {
+
+      window.addEventListener('load', async (event) => {
+        while (!window.RufflePlayer.newest) await new Promise((r) => setTimeout(r, 100))
         const ruffle = window.RufflePlayer.newest()
         const player = ruffle.createPlayer()
         const container = document.getElementById('container')
         container.appendChild(player)
         player.load({
-          url: 'whackyourboss.swf'
+          url: '/30nama-games/whack-your-boss/whackyourboss.swf'
         })
       })
     </script>
-    <script src="../ruffle/ruffle.js"></script>
+    <script src="/30nama-games/ruffle/ruffle.js"></script>
   </head>
 
   <body>

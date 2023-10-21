@@ -31,17 +31,19 @@
     </style>
     <script>
       window.RufflePlayer = window.RufflePlayer || {}
-      window.addEventListener('load', (event) => {
+
+      window.addEventListener('load', async (event) => {
+        while (!window.RufflePlayer.newest) await new Promise((r) => setTimeout(r, 100))
         const ruffle = window.RufflePlayer.newest()
         const player = ruffle.createPlayer()
         const container = document.getElementById('container')
         container.appendChild(player)
         player.load({
-          url: 'earn-to-die-2-exodus.swf'
+          url: '/30nama-games/earn-to-die-2-exodus/earn-to-die-2-exodus.swf'
         })
       })
     </script>
-    <script src="../ruffle/ruffle.js"></script>
+    <script src="/30nama-games/ruffle/ruffle.js"></script>
   </head>
 
   <body>
