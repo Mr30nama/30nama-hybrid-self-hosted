@@ -1,0 +1,1 @@
+import{d as t,Q as s,a,g as n,h as r}from"./entry.cda885f0.js";const _=t({__name:"index",setup(c){const e=s(),o=a();return e.replace(`/single/${o.params.id}/info`),(u,p)=>(n(),r("div"))}});export{_ as default};
